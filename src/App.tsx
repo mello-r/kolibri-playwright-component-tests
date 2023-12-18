@@ -1,5 +1,7 @@
 import './App.css';
 import { KolButton } from '@public-ui/react';
+import { StatusBadgeWithKol } from './components/StatusBadgeWithKol';
+import { StatusBadgeWithoutKol } from './components/StatusBadgeWithoutKol';
 
 function App() {
 	return (
@@ -28,7 +30,7 @@ function App() {
 					<KolButton
 						_hideLabel
 						_label="Danger"
-						_icon="codicon codicon-trash"
+						_icons="codicon codicon-trash"
 						_on={{
 							onClick: () => {
 								console.log('Clicked danger');
@@ -36,6 +38,10 @@ function App() {
 						}}
 						_variant="danger"
 					/>
+				</p>
+				<p>
+					<StatusBadgeWithKol />
+					<StatusBadgeWithoutKol />
 				</p>
 			</header>
 		</div>
